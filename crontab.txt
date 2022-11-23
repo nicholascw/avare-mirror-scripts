@@ -1,0 +1,5 @@
+#avare-cycle
+5 0 1 * * python3 /usr/share/nginx/mirrors.nw.ci/avare_scripts/update_cycle.py http://www.apps4av.org/new/ /usr/share/nginx/mirrors.nw.ci/public/avare
+
+#avare-weather
+*/10 * * * * wget --mirror --no-directories --no-verbose --directory-prefix=/usr/share/nginx/mirrors.nw.ci/public/avare --input-file=/usr/share/nginx/mirrors.nw.ci/avare_scripts/weathers.txt
