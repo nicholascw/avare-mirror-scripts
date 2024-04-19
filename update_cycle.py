@@ -69,7 +69,7 @@ def main():
         return
     create_ver_dir(dir_path, new_version)
     os.chdir("../")
-    new_version_dir = new_version + '/'
+    new_version_dir = new_version #+ '/'
     response = requests.get(url / new_version_dir)
     zipfiles = parse_web(response)
     generate_input_file(url / new_version_dir, zipfiles, new_version)
